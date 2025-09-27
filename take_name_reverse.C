@@ -9,7 +9,8 @@ int main()
    char name[20];
    int i;
    printf("Enter Your Name :- \n");
-   scanf("%s",name);
+   scanf("%[^\n]",name); // we can take gets(name); 
+  //  fgets(str, sizeof(str), stdin); // Read up to sizeof(str)-1 characters or until newline from stdin 
    for(i = 0;name[i] != '\0' ; i++){
     printf("%c",name[i]);
    }
